@@ -16,9 +16,10 @@ Route::middleware(['auth','verified'])->group(function(){
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::resource('/project',ProjectController::class);
-    Route::resource('/task',TaskController::class);
-    Route::resource('/user',UserController::class);
+    Route::resource('/project',controller: ProjectController::class);
+    Route::resource('/task',controller: TaskController::class);
+    Route::resource('/user',controller: UserController::class);
+
 
 });
 
