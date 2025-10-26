@@ -14,9 +14,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
+
         $query = Project::query();
         $projects = $query->paginate(10)->onEachSide(1);
+        //Inertia is creating the Response object
         return inertia("Project/Index",[
+            //we are wrapping the paginator in the ResourceCollection
             'projects' => ProjectResource::collection($projects),
         ]);
     }
