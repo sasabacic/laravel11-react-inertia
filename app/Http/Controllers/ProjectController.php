@@ -33,7 +33,9 @@ class ProjectController extends Controller
 
         //Inertia is creating the Response object
         return inertia("Project/Index",[
-            //we are wrapping the paginator in the ResourceCollection
+            //we are transforming database results before sending to the frontend
+            /*Collection loops through each project in the collection
+            and applies ProjectResource transformation to each one */
             'projects' => ProjectResource::collection($projects),
             'queryParams' => request()->query() ?: null,
         ]);
