@@ -29,3 +29,13 @@ export const TASK_PRIORITY_TEXT_MAP = {
   high: "High", 
 };
 
+export const USER_STATUS_CLASS_MAP = {
+  active: "bg-green-500",
+  inactive: "bg-red-500",
+};
+
+export const USER_STATUS_TEXT_MAP = {
+  active: "Active",
+  inactive: "Inactive",
+};
+
